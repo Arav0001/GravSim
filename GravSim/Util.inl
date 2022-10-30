@@ -5,6 +5,8 @@
 #include "consolas_font.h"
 
 namespace util {
+	const std::string HELP_TEXT = "Welcome to GravSim!\n\nHow To Use\n\n  1. After launching you should see a grid on your screen.\n  2. To maneuver around the grid you can use WASD.\n  3. To create a particle click with your left mouse button.\n  4. Once you have clicked, drag your mouse to a position to make the radius of your particle.\n  5. Then use the Up and Down arrow keys to increase or decrease the mass of the particle.\n  6. Once you have modified all the parameters of your particle you can click ENTER to finalize the creation.\n  7. If you ever want to pause the simulation you can just click SPACE at any time (except during particle creation)\n     to pause the simulation.\n  8. Make more particles and have fun experiencing gravity in real-time!\n\nCONTROLS\n\nW - Move view UP\nA - Move view LEFT\nS - Move view DOWN\nD - Move view RIGHT\n\nLEFT CLICK - Create particle\nENTER - Confirm create particle\nUP ARROW - Increase mass\nDOWN ARROW - Decrease mass\n\nESCAPE - Quit application\n\nF1 - Toggle statistics\nF2 - Toggle arrows\nF3 - Toggle labels\nF4 - Toggle help menu";
+
 	inline void drawText(const std::string& str, const int size, const float& x, const float& y, const sf::Color color, sf::RenderWindow& window) {
 		auto font = sf::Font();
 		font.loadFromMemory(&Consolas_ttf, Consolas_ttf_len);

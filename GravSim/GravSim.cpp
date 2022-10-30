@@ -11,7 +11,7 @@ public:
 
     ParticleSystem particleSystem;
 
-    bool paused = false, showStatistics = true, showArrows = true, showLabels = true;
+    bool paused = false, showStatistics = true, showArrows = true, showLabels = true, showHelp = true;
 
     long long ticksElapsed = 0;
     bool doCompute = true;
@@ -53,12 +53,14 @@ public:
         util::drawText(std::to_string(ticksElapsed / 216000) + "h " + std::to_string(ticksElapsed / 3600) + "m " + std::to_string(ticksElapsed / 60) + "s elapsed", 16.0f, 10.0f + viewOffset.x, (float)window.getSize().y - 26.0f + viewOffset.y, sf::Color::White, window);
         util::drawText(std::to_string((int)round(fps)) + " FPS", 16.0f, (float)window.getSize().x - 70.0f + viewOffset.x, 10.0f + viewOffset.y, sf::Color::White, window);
 
-        particleSystem.render(window);
+    	particleSystem.render(window);
         particleSystem.updatePhysics(doCompute, paused);
 
         particleSystem.drawArrows(window, sf::Color::Red, showArrows);
         particleSystem.drawLabels(window, sf::Color::Cyan, showLabels);
         particleSystem.drawStatistics(viewOffset, window, sf::Color::White, showStatistics);
+
+        displayHelpMenu();
 
         window.display();
 
@@ -80,6 +82,7 @@ public:
             if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::F1) showStatistics = !showStatistics;
             if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::F2) showArrows = !showArrows;
             if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::F3) showLabels = !showLabels;
+            if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::F4) showHelp = !showHelp;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) view.move(sf::Vector2f(+0.0f, -5.0f));
@@ -90,6 +93,13 @@ public:
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
             particleSystem.addParticle(handleParticle(event));
         }
+    }
+
+    void displayHelpMenu() {
+	    if (showHelp) {
+	    	window.clear();
+	    	util::drawText(util::HELP_TEXT, 28, 10, 10, sf::Color::White, window);
+	    }
     }
 
     Particle handleParticle(sf::Event event) {
