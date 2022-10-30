@@ -27,4 +27,6 @@
 \
 **F1** - Toggle statistics\
 **F2** - Toggle arrows\
-**F3** - Toggle labels
+**F3** - Toggle labels\
+\
+**F4** - Toggle help menu
