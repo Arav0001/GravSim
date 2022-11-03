@@ -1,5 +1,21 @@
 # GravSim
 
+## Building
+
+First, install Visual Studio 2019-2022. Then follow the instructions below:
+
+Open up a terminal of choice and input the following commands:
+
+```bash
+cd path/to/parent/folder
+```
+```bash
+git clone https://github.com/Arav0001/GravSim.git
+```
+```bash
+cd GravSim && start GravSim.sln
+```
+
 ## How To Use
 
   1. After launching you should see a grid on your screen.
