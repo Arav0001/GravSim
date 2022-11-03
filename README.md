@@ -2,7 +2,10 @@
 
 ## Building
 
-First, install Visual Studio 2019-2022. Then follow the instructions below:
+First, install Visual Studio 2019-2022.
+https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false
+
+Then follow the instructions below:
 
 Open up a terminal of choice and input the following commands:
 
