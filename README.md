@@ -2,7 +2,7 @@
 
 ## Building
 
-First, install Visual Studio 2019-2022: https://visualstudio.microsoft.com/downloads/
+Install Visual Studio 2019-2022: https://visualstudio.microsoft.com/downloads/
 
 Install Git: https://git-scm.com/download/win
 
