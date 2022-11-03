@@ -6,6 +6,8 @@ First, install Visual Studio 2019-2022: https://visualstudio.microsoft.com/downl
 
 Install Git: https://git-scm.com/download/win
 
+Install SFML-2.5.1 to ```C:/SFML-2.5.1```: https://www.sfml-dev.org/download/sfml/2.5.1/
+
 Then follow the instructions below:
 
 Open up a terminal of choice and input the following commands:
